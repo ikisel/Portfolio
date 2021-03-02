@@ -1,51 +1,24 @@
-# Ignore list for Eagle, a PCB layout tool
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# Backup files
-*.s#?
-*.b#?
-*.l#?
-*.b$?
-*.s$?
-*.l$?
+# Dump file
+*.stackdump
 
-# Eagle project file
-# It contains a serial number and references to the file structure
-# on your computer.
-# comment the following line if you want to have your project file included.
-eagle.epf
+# Folder config file
+[Dd]esktop.ini
 
-# Autorouter files
-*.pro
-*.job
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# CAM files
-*.$$$
-*.cmp
-*.ly2
-*.l15
-*.sol
-*.plc
-*.stc
-*.sts
-*.crc
-*.crs
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-*.dri
-*.drl
-*.gpi
-*.pls
-*.ger
-*.xln
-
-*.drd
-*.drd.*
-
-*.s#*
-*.b#*
-
-*.info
-
-*.eps
-
-# file locks introduced since 7.x
-*.lck
+# Windows shortcuts
+*.lnk
