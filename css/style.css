@@ -84,7 +84,9 @@ body {
 
 .title-h1 {
     font-size: 74px;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-top: 38px;
 }
 
 .title-h3 {
@@ -93,15 +95,15 @@ body {
 }
 
 .photo {
-    margin-bottom: 120px;
+    margin-bottom: 93px;
     width: 100%;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 60px;
+    padding-top: 44px;
+    padding-bottom: 65px;
 }
 
 .nav {
@@ -109,11 +111,12 @@ header {
     padding-left: 0;
     margin: 0;
     display: flex;
+    justify-content: space-between;
 }
 
-.nav-item {
-    padding-left: 16px;
-    padding-right: 16px;
+.nav-social .nav-item {
+    padding-left: 28px;
+    padding-right: 28px;
 }
 
 .nav-item:first-child {
@@ -127,13 +130,14 @@ header {
 .nav-link {
     text-decoration: none;
     font-size: 14px;
+    transition: 0.2s color ease;
 }
 
 .nav-link:hover {
     color: #D40000;
 }
 
-.nav-info .nav-item {
+/* .nav-info .nav-item {
     position: relative;
 }
 
@@ -150,13 +154,41 @@ header {
 
 .nav-info .nav-item:first-child::before {
     display: none;
+} */
+
+.nav-social .nav-item {
+    position: relative;
+}
+
+.nav-social .nav-item::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 24px;
+    background-color: rgba(243, 242, 240, 0.5);
+    position: absolute;
+    left: 0;
+    top: calc(50% - 12px);
+}
+
+.nav-social .nav-item:first-child::before {
+    display: none;
+}
+
+.nav-item {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.nav-social .nav-link {
+    font-size: 16px;
 }
 
 .social {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 60px;
-    margin-top: 100px;
+    padding-bottom: 48px;
+    margin-top: 106px;
 
 }
 
@@ -170,6 +202,13 @@ header {
     align-items: center;
     font-size: 16px;
     font-weight: 700;
+    padding-bottom: 11px;
+    transition: 0.2s border-bottom ease;
+    border-bottom: 2px solid transparent;
+}
+
+.project:hover {
+    border-bottom: 2px solid #F3F2F0;
 }
 
 .project-img {
@@ -182,13 +221,16 @@ header {
 
 .skill {
     display: flex;
-    justify-content: space-between;
-    padding-top: 60px;
-    padding-bottom: 118px;
+    padding-top: 47px;
+}
+
+.skill .title-h3 {
+    letter-spacing: 0.03em;
 }
 
 .skill-item {
-    flex: 0 0 21%;
+    flex: 0 0 22%;
+    margin-right: 3%;
 }
 
 .skill .title-h3 {
@@ -204,8 +246,8 @@ header {
     justify-content: space-between;
     align-items: center;
     line-height: 150%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .steps-title {
@@ -213,7 +255,7 @@ header {
 }
 
 .steps-title span {
-    margin-right: 45px;
+    margin-right: 38px;
 }
 
 .steps-description {
@@ -223,7 +265,7 @@ header {
 }
 
 .section-steps {
-    padding-top: 145px;
+    padding-top: 167px;
     padding-bottom: 198px;
 }
 
@@ -232,14 +274,14 @@ header {
     height: 253px;
     position: absolute;
     left: -128px;
-    top: calc(50% - 126px);
+    top: calc(50% - 137px);
     z-index: 1;
 }
 
 .triangle {
     position: absolute;
     left: -151px;
-    top: 0;
+    top: -22px;
     z-index: 2;
 }
 
@@ -248,12 +290,16 @@ header {
     height: 106px;
     position: absolute;
     right: 38px;
-    top: calc(50% - 53px);
+    top: calc(50% - 60px);
+}
+
+.section-about {
+    padding-top: 107px;
 }
 
 .about {
     display: grid;
-    grid-template: 336px/repeat(4, 1fr)
+    grid-template: 290px/repeat(4, 1fr)
 }
 
 .about-title {
@@ -263,8 +309,8 @@ header {
     font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    padding-top: 60px;
-    padding-bottom: 32px;
+    padding-top: 67px;
+    padding-bottom: 62px;
 }
 
 .about-description {
@@ -273,35 +319,43 @@ header {
     font-size: 28px;
     line-height: 150%;
     opacity: 0.8;
-    padding: 60px 10px 32px 20px;
+    padding: 60px 10px 32px 9px;
+}
 
+.about-item>p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .about-01 {
     grid-column: 3/4;
     grid-row: 2/3;
-    padding: 44px 20px 30px 20px;
+    padding: 47px 20px 35px 9px;
 }
 
 .about-02 {
     grid-column: 4/5;
     grid-row: 2/3;
-    padding: 44px 10px 30px 10px;
+    padding: 47px 10px 35px 12px;
 }
 
 .about-03 {
     grid-column: 3/4;
     grid-row: 3/4;
-    padding: 30px 20px;
+    padding: 14px 20px 14px 9px;
 }
 
 .about-04 {
     grid-column: 4/5;
     grid-row: 3/4;
-    padding: 30px 10px 35px 10px;
+    padding: 14px 10px 14px 12px;
 }
 
 .about-item .description {
     line-height: 150%;
     opacity: 0.8;
+}
+
+.about-item .title-h3 {
+    margin-bottom: 21px;
 }
