@@ -34,7 +34,11 @@
                     <li class="nav-item"><a class="nav-link" href="mailto:alexdev@gmail.com">alexdev@gmail.com</a></li>
                 </ul>
             </header>
-            <img class="photo" src="img/photo.png" alt="photo">
+            <div class="header-mobile">
+                <a class="nav-link" href="tel:=+79237777777">8 923 777-77-77</a>
+                <button id="opener" class="menu"><img src="img/icons/burger.svg" alt="Menu"></button>
+            </div>
+            <div class="photo"><img src="img/photo.png" alt="photo"></div>
             <main>
                 <div class="main">
                     <svg class="circle circle-main" viewBox="0 0 253 253" xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +388,7 @@
                         Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам">
                     </div>
                     <div class="tech-item jquery">
-                        <img class="tech-image" src="img/tech/jquery.svg" alt="JQuery"
+                        <img class="tech-image" src="img/tech/jquery-one.svg" alt="JQuery"
                             title="Популярная библиотека JavaScript">
                     </div>
                     <div class="tech-item bootstrap">
@@ -419,7 +423,7 @@
                         <p>Представленные ниже цены зависят не&nbsp;только от того, какой сайт вы хотите. Конечная цена
                             будет озвучена после прочтения Вашего ТЗ</p>
                     </div>
-                    <div class="tarif-item">
+                    <div class="tarif-item tarif-left">
                         <div class="tarif-header">
                             <p class="tarif-name">Разработка<br>лэндинга или сайт визитки</p>
                             <p class="tarif-text">Небольшой сайт, состоящий из одной страницы</p>
@@ -444,7 +448,7 @@
                             <p class="tarif-price">От 7 000 Р</p>
                         </div>
                     </div>
-                    <div class="tarif-item tarif-item-second">
+                    <div class="tarif-item tarif-left tarif-item-second">
                         <p class="tarif-name">Разработка<br>корпоративного сайта</p>
                         <p class="tarif-text">Небольшой сайт с n-количеством страниц</p>
                         <p class="project"><span>Обсудить проект</span><span class="project-img"></span></p>
@@ -458,7 +462,7 @@
                         </ul>
                         <p class="tarif-price">От 10 000 Р</p>
                     </div>
-                    <div class="tarif-item tarif-item-third">
+                    <div class="tarif-item tarif-left tarif-item-third">
                         <p class="tarif-name">Разработка<br>интернет - магазина</p>
                         <p class="tarif-text">Полноценный каталог вашей продукции</p>
                         <p class="project"><span>Обсудить проект</span><span class="project-img"></span></p>
@@ -486,11 +490,13 @@
                     <svg class="circle circle-form" viewBox="0 0 253 253" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="126.5" cy="126.5" r="126.5" />
                     </svg>
-                    <svg class="triangle-form" width="65" height="69" viewBox="0 0 65 69" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M32.6694 0L64.426 68.7551L0.912767 68.7551L32.6694 0Z" fill="white"/>
-                        </svg>
-                        
-                    <div class="form-title">                      
+                    <svg class="triangle-form" width="65" height="69" viewBox="0 0 65 69" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.6694 0L64.426 68.7551L0.912767 68.7551L32.6694 0Z" />
+
+                    </svg>
+
+                    <div class="form-title">
                         <p>Расскажите<br>о своем проекте</p>
                     </div>
                     <div class="form-description">
@@ -544,6 +550,10 @@
         </div>
         <footer></footer>
     </div>
+    <div id="dialog" title="Basic dialog">
+        <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved,
+            resized and closed with the &apos;x&apos; icon.</p>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script/jquery-ui.min.js"></script>
@@ -554,6 +564,21 @@
             });
             $(document).tooltip();
             $("#communicate").selectmenu();
+            $("#dialog").dialog({
+                autoOpen: false,
+                show: {
+                    effect: "blind",
+                    duration: 1000
+                },
+                hide: {
+                    effect: "blind",
+                    duration: 1000
+                }
+            });
+
+            $("#opener").on("click", function () {
+                $("#dialog").dialog("open");
+            });
         });
         $(".tech-image").tooltip({
             position: {
