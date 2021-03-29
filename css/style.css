@@ -1372,7 +1372,7 @@ footer {
     }
 
     .name {
-        margin-bottom 0;
+        margin-bottom: 0;
     }
 
     .title-h1 {
@@ -1418,6 +1418,17 @@ footer {
     .skill-item {
         padding-bottom: 10px;
     }
+
+    /* .project-img {
+        background-size: cover;
+        width: 12px;
+        height: 9px;
+        margin-top: 1px;
+    } */
+    /* .nav-social .nav-item::before {
+        height: 14px;
+        top: calc(50% - 7px);
+    } */
 
     .section-about {
         padding-top: 0;
